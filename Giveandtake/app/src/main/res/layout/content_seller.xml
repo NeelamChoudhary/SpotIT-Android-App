@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.example.tanyasanjay.giveandtake.Seller"
+    tools:showIn="@layout/activity_seller">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Hello Seller!"
+        android:id="@+id/seller_view"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="35dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Merchandise:"
+        android:id="@+id/merchandize_view"
+        android:layout_below="@+id/seller_view"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="36dp" />
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/merchandize_text"
+        android:layout_marginLeft="87dp"
+        android:layout_alignBottom="@+id/merchandize_view"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Location:"
+        android:id="@+id/address_view"
+        android:layout_marginTop="35dp"
+        android:layout_below="@+id/merchandize_view"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPostalAddress"
+        android:ems="10"
+        android:id="@+id/merchandise_loc"
+        android:layout_above="@+id/setlocation"
+        android:layout_alignEnd="@+id/mprice" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Set Location"
+        android:id="@+id/setlocation"
+        android:layout_below="@+id/address_view"
+        android:layout_alignEnd="@+id/merchandise_loc" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Description:"
+        android:id="@+id/desc_view"
+        android:layout_centerVertical="true"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textMultiLine"
+        android:ems="10"
+        android:id="@+id/desc_merchandise"
+        android:layout_alignTop="@+id/desc_view"
+        android:layout_toEndOf="@+id/merchandize_view" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Merchandise price"
+        android:id="@+id/price_view"
+        android:layout_below="@+id/desc_merchandise"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="36dp" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/mprice"
+        android:layout_above="@+id/save_next"
+        android:layout_alignParentEnd="true"
+        android:layout_toEndOf="@+id/merchandize_text" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Save and Next"
+        android:id="@+id/save_next"
+        android:layout_below="@+id/price_view"
+        android:layout_alignStart="@+id/seller_view"
+        android:layout_marginTop="65dp" />
+
+</RelativeLayout>
